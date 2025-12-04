@@ -1,0 +1,6 @@
+a = input("Enter first number = ")
+b = input("Enter second number = ")
+print("Enter the operator you want to perform = ")
+op = input(" + , - , * , / , % , // , ** : ")
+result= eval(f"{a} {op} {b}")
+print("The result is = ", result)
