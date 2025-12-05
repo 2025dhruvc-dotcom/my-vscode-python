@@ -1,5 +1,5 @@
 print("-----------------------------------------------------------")
-print("\n Student Details:\n")
+print("\n 😈Student Details😈:\n")
 class Students:
     name = ""
     rollno = 0
@@ -9,14 +9,14 @@ class Students:
         print("Rollno:",self.rollno)
 
 s1 = Students()
-s1.name = "Dhruv"
-s1.rollno = 101
-s1.display()
+s1.name = input("Enter Student Name: ")
+s1.rollno = input("Enter Roll Number: ")
+
 
 
 print("\n-----------------------------------------------------------")
 
-print("\n Employee Details:\n")
+print("\n 💀Employee Details:\n")
 class employee:
     name = ""
     empid = 0
@@ -29,10 +29,9 @@ class employee:
         print("Email:",self.email)
 
 e1 = employee()
-e1.name = "Amit"
-e1.empid = 501
-e1.company = "Google"
-e1.email = "chavdadhruv@gmail.com"
-e1.display()
+e1.name = input("Enter Employee Name: ")
+e1.empid = input("Enter Employee ID: ")
+e1.company = input("Enter Company Name: ")
+e1.email = input("Enter Email ID: ")
 
 print("-----------------------------------------------------------")
