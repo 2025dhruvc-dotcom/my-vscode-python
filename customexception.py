@@ -1,12 +1,11 @@
 class InsufficientBalanceError(Exception):
-    def _int_(self):
-        super()._init_(
-           f"Insufficient balance to perform this operation."
-        )
+    def __init__(self):
+        super().__init__("Insufficient balance to perform this operation.")
 
-class ATMaccount():
-    def _int_(self,balance):
-         self.balance = balance  
+
+class ATMaccount:
+    def __init__(self, balance):
+        self.balance = balance  
 
     def withdraw(self, amount):
         if amount > self.balance:
@@ -16,13 +15,16 @@ class ATMaccount():
         print("Withdrawal successful.")
         return self.balance     
 
+
 try:
-    account = ATMaccount()
-    account.balance = 500  # Initial balance
+    account = ATMaccount(500)  # Initial balance
 
     # Attempt to withdraw an amount greater than the balance
-    account.withdraw(600)
+    account.withdraw(500)
+
 except InsufficientBalanceError as e:
     print(e)
+
 except Exception as e:
-    print(f"An error occurred: {e}")        # Initial balance # Trying to withdraw more than balance
+    print(f"An error occurred: {e}")
+
